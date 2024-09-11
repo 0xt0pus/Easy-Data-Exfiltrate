@@ -36,4 +36,20 @@ scp user@ServerIP:/home/location/of/the/data.zip Location/on/MySystem.zip
 The above command will simply copy the file/data from remote server just like the `cp` command copies files in your own system. 
 
 
+### Through TCP connection
+
+
+```bash
+cat file.zip > /dev/tcp/IP/PORT
+```
+
+This will send the contents of a file file.zip over a TCP connection to a remote host IP on a specific PORT. We can recieve the file with netcat with the following command. 
+
+```bash
+nc -lvnp 9001 > file.zip
+```
+
+
+
+
 
