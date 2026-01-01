@@ -101,9 +101,9 @@ sudo impacket-smbserver share $(pwd) -smb2support
 
 ##### Explanation:
 
-share → Name of the SMB share
-$(pwd) → Current directory (smbshare)
--smb2support → Required for Windows 10 / 11
+1. share → Name of the SMB share
+2. $(pwd) → Current directory (smbshare)
+3. -smb2support → Required for Windows 10 / 11
 
 
 #### Connecting from Windows
@@ -121,8 +121,9 @@ This forces an anonymous SMB connection, which works reliably with Impacket.
 
 Open File Explorer and enter the following in the address bar:
 
+```
 \\192.168.45.178\share
-
+```
 
 You should now see the contents of the Kali shared directory.
 
